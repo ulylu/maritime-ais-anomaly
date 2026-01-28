@@ -5,10 +5,11 @@ This repository contains the implementation and experimental artifacts for a COM
 on anomaly detection in AIS vessel trajectory data.
 
 ## Current Status
-- AIS daily CSV files merged successfully (7 days)
-- Merged dataset size: ~46.5 million AIS records
-- Output file generated locally (excluded from Git due to size)
-- Next: create a lightweight processed dataset (subset + dedup) for analysis
+- AIS data sourced from NOAA Marine Cadastre (AIS Vessel Tracks)
+- Seven days of AIS data merged into a single dataset
+- Initial preprocessing and data integrity checks completed
+- Example vessel trajectory extracted and visualized
+
 
 ## Project Timeline
 - Weeks 1–2: Data familiarization and feasibility assessment
