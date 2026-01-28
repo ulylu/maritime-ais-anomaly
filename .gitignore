@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- AIS data (DO NOT COMMIT) ---
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.zip
+*.7z
+*.rar
+
+# If you keep data in a folder, ignore it too
+data/
+raw/
+processed/
+
+# Large files / outputs
+*.log
+*.tmp
