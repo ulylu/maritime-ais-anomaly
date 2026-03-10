@@ -1,0 +1,36 @@
+Method A — By-Type Anomaly Scoring Summary
+==================================================
+Run timestamp    : 2026-03-07T17:50:54.501797
+Input features   : output/ais_features.csv
+Output directory : output/methodA_by_type
+Top fraction     : 0.01 (1.0%)
+Types processed  : speed
+Total rows scored: 34,615,902
+Elapsed seconds  : 200.8
+
+Scoring method
+--------------
+One-sided robust z-score:
+  score = max(0, x - median) / (1.4826 * MAD)
+Only values ABOVE the fleet median score > 0.
+This prevents short gaps from being flagged alongside long ones.
+
+Results per anomaly type
+------------------------
+
+[speed]
+  Features       : sog_curr, abs_dsog  (one-sided: flags HIGH values only)
+  Rows scored    : 34,615,902
+  Above median   : 13,213,428 (38.2%)
+  Top 1% count   : 348,062
+  Score threshold: 3.744551
+  Top-1% CSV     : output/methodA_by_type\speed_top1pct.csv
+  Explain CSV    : output/methodA_by_type\speed_explain.csv
+
+Generated files
+---------------
+  output/methodA_by_type\speed_top1pct.csv
+  output/methodA_by_type\speed_explain.csv
+  output/methodA_by_type\all_anomaly_summary.csv
+  output/methodA_by_type\reference_stats.json
+  output/methodA_by_type\methodA_by_type_summary.txt
