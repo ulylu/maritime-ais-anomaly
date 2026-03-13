@@ -157,6 +157,11 @@ cases and gives a more representative view of the flagged population.
 - By-type pipeline produces separate top-1% lists and explanation tables per anomaly category
 - Plots are matched to the anomaly type (e.g. SOG vs time for speed; gap vs time for timegap)
 
+### 2026-03-13
+- Method B (LSTM) deliverables finalized and organized under `MethodB-LSTM/`
+- Added Method B source scripts, model artifacts, summary output, and figures
+- Repository timeline updated to include Method B completion milestone
+
 ---
 
 ## Project Timeline
