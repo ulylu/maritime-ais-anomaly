@@ -168,7 +168,7 @@ cases and gives a more representative view of the flagged population.
 - Weeks 1-2: Data familiarization and feasibility assessment
 - Weeks 3-4: Data preprocessing and feature engineering
 - Weeks 5-8: Anomaly detection method implementation (Method A baseline completed)
-- Weeks 9-10: Method A by-type pipeline; evaluation and comparison
+- Weeks 9-10: Implemented Method B
 
 ---
 
