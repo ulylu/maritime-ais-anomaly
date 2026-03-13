@@ -1,0 +1,26 @@
+{
+  "seq_len": 10,
+  "hidden": 64,
+  "layers": 2,
+  "n_features": 8,
+  "feature_names": [
+    "SOG",
+    "sin_COG",
+    "cos_COG",
+    "sin_HDG",
+    "cos_HDG",
+    "delta_lat",
+    "delta_lon",
+    "log_delta_t"
+  ],
+  "best_epoch": 7,
+  "best_val_loss": 0.14016675008248564,
+  "n_train": 4708037,
+  "n_val": 830830,
+  "max_vessels": 2000,
+  "epochs_ran": 12,
+  "batch_size": 512,
+  "lr": 0.001,
+  "patience": 5,
+  "max_gap_sec": 3600
+}
