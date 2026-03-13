@@ -1,0 +1,49 @@
+Method B ¡ª LSTM Anomaly Scoring Summary
+==================================================
+Run timestamp    : 2026-03-12T20:42:45.395775
+Input data       : data/ais_2024_last7days.csv
+Model directory  : output/lstm
+Output directory : output/methodB_lstm
+Vessels scored   : 4,942 / 5,000 sampled
+Total sequences  : 14,626,686
+Top fraction     : 0.01 (1.0%)
+Top count        : 146,266
+
+Scoring method
+------------------------------
+LSTM next-step prediction model (trained on normal data only).
+Sequence length  : 10
+Features         : SOG, sin_COG, cos_COG, sin_HDG, cos_HDG, delta_lat, delta_lon, log_delta_t
+anomaly_score    = MSE between predicted and actual next step.
+
+Prediction error distribution (all scored sequences)
+------------------------------
+    min: 0.000010
+    p25: 0.000935
+    p50: 0.004263
+    p75: 0.045598
+    p90: 0.294009
+    p95: 0.460404
+    p99: 1.046050
+    max: 9382.076172
+   mean: 0.164473
+    std: 7.050699
+
+Training-set thresholds (for reference)
+------------------------------
+  p95 : 0.449592
+  p99 : 1.010623
+
+Dominant error types in top 1%
+------------------------------
+            speed:   32,432 ( 22.2%)
+           course:   65,693 ( 44.9%)
+          heading:   37,176 ( 25.4%)
+    position_jump:   10,883 (  7.4%)
+         time_gap:       82 (  0.1%)
+
+Generated files
+------------------------------
+  output/methodB_lstm\methodB_top1pct.csv
+  output/methodB_lstm\methodB_explain.csv
+  output/methodB_lstm\error_stats.json
