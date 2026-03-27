@@ -1,0 +1,37 @@
+IF Anomaly Post-Hoc Classification Summary
+==================================================
+Timestamp           : 2026-03-26T22:32:39.962985
+Input explain table : method_A/output/ais_methodA_top1pct_explain.csv
+Reference stats     : method_A/output/methodA_by_type/reference_stats.json
+Total IF anomalies  : 346,160
+Threshold level     : p95
+Assignment mode     : multi-label (each anomaly can belong to 0+ categories)
+
+Classification rules
+--------------------------------------------------
+  speed      : sog_curr > 10.80 OR abs_dsog > 1.20
+  turn       : abs_dcog > 129.80
+  timegap    : delta_t_s > 3718.95
+  distance   : dist_m > 1904.92 OR implied_kts > 10.60
+
+Results
+--------------------------------------------------
+  speed           :  319,287 anomalies ( 92.2%)
+  turn            :   92,731 anomalies ( 26.8%)
+  timegap         :  116,639 anomalies ( 33.7%)
+  distance        :  208,943 anomalies ( 60.4%)
+  unclassified    :      540 anomalies (  0.2%)
+
+  Multi-category   :  256,121 anomalies (74.0%) belong to 2+ categories
+
+Output files
+--------------------------------------------------
+  test/output\all_classified.csv
+  test/output\speed_classified.csv
+  test/output\turn_classified.csv
+  test/output\timegap_classified.csv
+  test/output\distance_classified.csv
+  test/output\unclassified.csv
+  test/output\classification_summary.csv
+  test/output\classification_summary.txt
+  test/output\reference_stats.json
