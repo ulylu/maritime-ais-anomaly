@@ -1,63 +1,36 @@
-# maritime-ais-anomaly
 # Machine Learning-Based Detection of Anomalous Vessel Behavior in AIS Data
 
-This repository contains the implementation and experimental artifacts for a COMP 4905 Honours Project
-focused on detecting anomalous vessel behavior from AIS trajectory data using machine learning methods.
+This repository contains the code, selected outputs, and supporting files for a COMP 4905 Honours Project on anomaly detection in AIS vessel data.
 
 ## Project Overview
 
-Automatic Identification System (AIS) data records vessel movement information such as position, speed,
-course, and heading. Because large volumes of AIS data are generated continuously, manual inspection is
-not practical for finding unusual vessel behavior. This project studies how machine learning methods can
-be used to detect suspicious movement patterns from real AIS records.
+Automatic Identification System (AIS) data records vessel movement information such as position, speed, course, and heading. Because AIS data is generated continuously and at large scale, manual inspection is not practical for identifying unusual vessel behavior. This project studies how machine learning methods can be used to support anomaly detection in real AIS data. :contentReference[oaicite:2]{index=2}
 
-The project uses AIS data from NOAA Marine Cadastre and focuses on the last seven days of 2024.
-Two different anomaly detection methods are implemented and compared:
+The project uses AIS data from NOAA Marine Cadastre and focuses on the last seven days of 2024 as the main study period. Two different anomaly detection methods are implemented and compared: :contentReference[oaicite:3]{index=3}
 
-- **Method A:** an Isolation Forest based pipeline for anomaly scoring and organized visualization
-- **Method B:** an LSTM-based sequence method for anomaly detection on time-ordered vessel behavior
+- **Method A:** an Isolation Forest based method that performs anomaly scoring on transition-level vessel movement features, followed by script-based result organization and visualization
+- **Method B:** an LSTM-based sequence method that detects anomalous behavior from short time-ordered vessel sequences through prediction error
 
-The goal of this project is not only to detect anomalous vessel behavior, but also to compare how
-different machine learning approaches describe suspicious movement from different angles.
-
----
-
-## Current Progress
-
-The current project stage includes:
-
-- AIS data collection completed
-- Data preprocessing completed
-- Feature engineering completed
-- **Method A completed**
-- **Method B completed**
-- Result visualization completed
-- Method comparison completed
-- **Final report draft in progress**
-
----
+These two methods analyze suspicious vessel behavior from different perspectives. Method A is more suitable for local transition-level anomalies, while Method B is more suitable for short continuous behavior patterns. :contentReference[oaicite:4]{index=4}
 
 ## Data Source
 
 The AIS data used in this project comes from:
 
-- **NOAA Marine Cadastre – AIS Vessel Tracks**
+- **NOAA Marine Cadastre – AIS Data for 2024**
 
-This project uses records from the **last seven days of 2024** as the main experimental dataset.
-
----
+This project focuses on records from **December 25 to December 31, 2024**. The full raw AIS dataset is large, so this submission package includes code, selected outputs, and project files rather than the complete original raw data. :contentReference[oaicite:5]{index=5}
 
 ## Repository Structure
 
 ```text
 maritime-ais-anomaly/
 ├── README.md
-├── MethodA-iForest/
+├── MethodA/
 │   ├── src/
 │   ├── output/
 │   └── models/
-├── MethodB-LSTM/
-│   ├── src/
-│   ├── output/
-│   └── models/
-└── report/
+└── MethodB-LSTM/
+    ├── src/
+    ├── output/
+    └── model/
